@@ -22,7 +22,9 @@ public:
     FTP_parser(){
         _path = CURRENT_DIR;
     }
-    explicit FTP_parser(std::string path):_path(path){}
+    explicit FTP_parser(std::string path):_path(path){
+        parse(path);
+    }
     ~FTP_parser(){
         _path.clear();
         _MAS.clear();
